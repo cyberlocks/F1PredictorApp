@@ -1,0 +1,9 @@
+on:
+  schedule:
+    - cron: '0 */4 * * *'
+  workflow_dispatch:  # Lets you run manually
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -s https://richardcarroll.streamlit.app/ > /dev/null
